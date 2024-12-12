@@ -14,21 +14,84 @@ Reference : https://www.channelnewsasia.com/singapore/big-read-rising-traffic-ac
 Majority of our datasets used will be from Kaggle. The possible datasets are as follows:
 - https://www.kaggle.com/datasets/imadeddinedjerarda/mrl-eye-dataset
 
+## Pre-requisites
+- Must have a webcam for capturing the driver's facial features for fatigue detection.
+
+## Steps to Run
+
+1. **Install a Virtual Environment**:
+   - To create and activate a virtual environment, run the following commands in your terminal:
+     ```bash
+     python -m venv venv
+     source venv/bin/activate  # On Windows, use .\venv\Scripts\activate
+     ```
+
+2. **Install Dependencies**:
+   - Install the required Python packages using `pip`:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+3. **Run the Project**:
+   - Once the dependencies are installed, you can start the project by running the detection script:
+     ```bash
+     python detection.py
+     ```
+
+## Troubleshooting
+
+- **Error: 'grab to failed frame'**
+  - This error means that the webcam is not available or unable to open. Ensure that:
+    - Your webcam is properly connected.
+    - No other application is using the webcam.
+    - You have the necessary permissions to access the webcam.
+    
+- **Error: 'ERROR: Could not install packages due to an OSError: [WinError 5]'**
+  - This error typically occurs on Windows when you don't have sufficient permissions to install packages. To fix this:
+    - Try running your IDE (e.g., VSCode) as **Administrator**.
+    - Right-click on your IDE and select **Run as Administrator**.
+
+- **Error: Depth Convolution Error while running `detection.py`**
+  - If you encounter this error, change the model file in `detection.py`. On line 23, replace:
+    ```python
+    model = load_model('./content/model-after-augmv2.h5')
+    ```
+    with:
+    ```python
+    model = load_model('./content/model-after-augm.h5')
+    ```
+    This ensures the correct model is loaded for the detection.
+
 
 ## Directory Structure
 ```
 Driver-Fatigue-System
-├── content/
+├── content
 │   ├── model-after-augm.h5
+│   ├── model-after-augmv2.h5
 │   ├── model.h5
 │   └── model2.h5
-|
+├── Datasets
+    ├── mrlEyes.py
+├── dlib files
+│   └── shape_predictor_68_face_landmarks.dat
+├── evaluation
+│   ├── head_tilt_eval.py
+│   └── yawn_eval.py
 ├── haar cascade files
+│   ├── haarcascade_eye_tree_eyeglasses.xml
 │   ├── haarcascade_frontalface_alt.xml
+│   ├── haarcascade_frontalface_alt2.xml
 │   ├── haarcascade_lefteye_2splits.xml
+│   ├── haarcascade_mcs_nose.xml
+│   ├── haarcascade_profileface.xml
 │   └── haarcascade_righteye_2splits.xml
-| 
-├── model/
-│   ├── transfer_learning.ipynb
-│   
+├── model
+│   └── transfer_learning.ipynb
+├── detection.py
+├──yawn.py 
+├── head_tilt.py
+├── README.md
+├── alarm.wav
+└──requirements.txt
 ```
