@@ -22,11 +22,11 @@ nose = cv2.CascadeClassifier('haar cascade files/haarcascade_mcs_nose.xml')
 # Load the trained model
 try:
     # Try to load the first model
-    model = load_model('./content/model-after-augmv2.h5')
+    model = load_model('./content/model-after-augm.h5')
     print("Model 'model-after-augm.h5' loaded successfully.")
 except Exception as e:
     # If loading the first model fails, try loading the second model
-    model = load_model('./content/model-after-augm.h5')
+    model = load_model('./content/model-after-augmv2.h5')
     print("Model 'model-after-augmv2.h5' loaded successfully.")
 
 # Start video capture
