@@ -40,7 +40,7 @@ Majority of our datasets used will be from Kaggle. The possible datasets are as 
 
 ## Troubleshooting
 
-- **Error: 'grab to failed frame'**
+- **Error: 'Failed to grab frame'**
   - This error means that the webcam is not available or unable to open. Ensure that:
     - Your webcam is properly connected.
     - No other application is using the webcam.
