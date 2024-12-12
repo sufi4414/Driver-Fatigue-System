@@ -20,7 +20,7 @@ reye = cv2.CascadeClassifier('haar cascade files/haarcascade_righteye_2splits.xm
 nose = cv2.CascadeClassifier('haar cascade files/haarcascade_mcs_nose.xml')
 
 # Load the trained model
-model = load_model('./content/model-after-augm.h5')
+model = load_model('./content/model-after-augmv2.h5')
 
 # Start video capture
 cap = cv2.VideoCapture(0)
