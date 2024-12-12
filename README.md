@@ -1,4 +1,4 @@
-# Driver-Fatigue-Project
+# Enhancing Road Safety through a Driver Fatigue Detection System
 
 ## Introduction
 Singapore, a densely populated city of over six million people, faces an increasing challenge with road safety due to the growing number of vehicles on its roads. The Singapore Police Force reports a worrying rise in accident fatalities, from `104` in 2022 to `131` in 2023 ([source](https://www.police.gov.sg/-/media/D4435F72157942D3B323EE4A507D4CFB.ashx)). Though driver fatigue is not the leading cause of road accidents, it is a significant contributing factor, especially when combined with other risky behaviors, such as driving under the influence of alcohol.
@@ -54,11 +54,11 @@ Majority of our datasets used will be from Kaggle. The possible datasets are as 
 - **Error: Depth Convolution Error while running `detection.py`**
   - If you encounter this error, change the model file in `detection.py`. On line 23, replace:
     ```python
-    model = load_model('./content/model-after-augmv2.h5')
+    model = load_model('./content/model-after-augm.h5')
     ```
     with:
     ```python
-    model = load_model('./content/model-after-augm.h5')
+    model = load_model('./content/model-after-augmv2.h5')
     ```
     This ensures the correct model is loaded for the detection.
 
