@@ -51,14 +51,14 @@ Majority of our datasets used will be from Kaggle. The possible datasets are as 
     - Try running your IDE (e.g., VSCode) as **Administrator**.
     - Right-click on your IDE and select **Run as Administrator**.
 
-- **Error: Depth Convolution Error while running `detection.py`**
+- **Error: 'Exception encountered: Unrecognized keyword arguments passed to DepthwiseConv2D: {'groups': 1}' `detection.py`**
   - If you encounter this error, change the model file in `detection.py`. On line 23, replace:
     ```python
-    model = load_model('./content/model-after-augm.h5')
+    model = load_model('./content/model-after-augmv2.h5')
     ```
     with:
     ```python
-    model = load_model('./content/model-after-augmv2.h5')
+    model = load_model('./content/model-after-augm.h5')
     ```
     This ensures the correct model is loaded for the detection.
 
