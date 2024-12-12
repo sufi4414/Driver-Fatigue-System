@@ -72,7 +72,7 @@ Driver-Fatigue-System
 │   ├── model.h5
 │   └── model2.h5
 ├── Datasets
-    ├── mrlEyes.py
+    ├── mrlEyes
 ├── dlib files
 │   └── shape_predictor_68_face_landmarks.dat
 ├── evaluation
