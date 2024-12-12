@@ -63,8 +63,6 @@ Driver-Fatigue-System
 │   └── model2.h5
 ├── Datasets
     ├── mrlEyes
-├── dlib files
-│   └── shape_predictor_68_face_landmarks.dat
 ├── evaluation
 │   ├── head_tilt_eval.py
 │   └── yawn_eval.py
