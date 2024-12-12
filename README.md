@@ -20,6 +20,7 @@ Majority of our datasets used will be from Kaggle. The possible datasets are as 
 ## Steps to Run
 
 1. **Install a Virtual Environment**:
+   - This project was run on `Python 3.9.6` and `Python 3.10`
    - To create and activate a virtual environment, run the following commands in your terminal:
      ```bash
      python -m venv venv
